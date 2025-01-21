@@ -2,16 +2,22 @@
 
 <html lang="en">
     <head>
-        <link href="styles.css" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="/styles.css" rel="stylesheet">
+        <script src="/topbar.js"></script>
+        <script src="/fade.js"></script>
+        <script>
+            topbar("/index.html")
+        </script>
         <title>Diego Mejia</title>
     </head>
     <body>
-        <div class="wrapper">
-            <div class="topbar border-curve bordered">
-                <div class="topbar-header">
-                    <p>was good bro</p>
-                </div>
-            </div>
+        <div id="topbar"></div>
+        <div class="homepage-video-wrapper">
+            <video autoplay loop muted class="homepage-video">
+                <source src="/media/homepage/portfoliovid.mp4" type="video/mp4"/>
+                Unable to load video
+            </video>
         </div>
     </body>
 </html>
