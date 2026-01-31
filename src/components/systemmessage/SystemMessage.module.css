@@ -1,0 +1,30 @@
+.systemMessage {
+    position: fixed;
+    bottom: 2rem;          /* distance from bottom of screen */
+    left: 50%;
+    z-index: 2000;
+
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    background-color: var(--bg-black);
+    color: var(--bold-text-color);
+    font-size: 1rem;
+    font-weight: bold;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.error {
+    background-color: rgba(236, 127, 127, 1);
+    color: rgba(0,0,0,1);
+}
+
+.info {
+    background-color: rgba(127, 179, 236, 1);
+    color: rgba(0,0,0,1);
+}
+
+.success {
+    background-color: rgba(127, 236, 179, 1);
+    color: rgba(0,0,0,1);
+}

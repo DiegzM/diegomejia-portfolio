@@ -1,0 +1,50 @@
+.titleTextContainer {
+    text-align: center;
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    left: 50%;
+    color: white;
+    position: absolute;
+    top: 48%;
+    width: 80%;
+    transform: translate(-50%, -50%);
+    animation: titleFadeIn 1s ease-in-out forwards;
+
+}
+
+@keyframes titleFadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-60%, -50%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.titleText {
+    font-size: 2rem;
+    font-family: 'Roboto Mono', monospace;
+    margin: 0;
+    font-weight: 500;
+    /* Make text box 80 percent of width in center */
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
+}
+
+/* Blinking cursor effect */
+.cursor {
+    display: inline-block;
+    animation: blink 1s step-start infinite;
+    opacity: 1;
+    transition: opacity 0.05s ease-in-out;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}

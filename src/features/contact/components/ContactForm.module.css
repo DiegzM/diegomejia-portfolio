@@ -1,0 +1,76 @@
+.contactForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.contactFormRow {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    width: 100%;
+}
+
+.contactFormLabel {
+    padding: 10px;  
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    border-radius: 5px;
+    background-color: var(--bg-gray);
+    color: var(--text-color);;
+    transition: 
+        border-color 0.3s ease-in-out,
+        background-color 0.3s ease-in-out,
+        color 0.3s ease-in-out;
+}
+
+.contactFormLabel span {
+    margin-bottom: 1rem;
+    font-weight: bold;
+    width: 100%;
+}
+
+.contactFormLabel input, .contactFormLabel textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    background-color: var(--bg-dark-gray);
+    font: inherit;
+    color: var(--text-color);
+    transition: 
+        border-color 0.3s ease-in-out,
+        background-color 0.3s ease-in-out,
+        color 0.3s ease-in-out;
+}
+
+.contactFormButton {
+    padding: 10px 30px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--bg-dark-gray);
+    color: var(--bold-text-color);
+    font-weight: bold;
+    font-size: 1.3rem;
+    cursor: pointer;
+    max-width: 400px;
+    transition: 
+        background-color 0.3s ease-in-out,
+        color 0.3s ease-in-out;
+}
+
+.contactFormButton:hover {
+    background-color: var(--bg-light-gray);
+    color: var(--button-text-hover-color);
+}
+
+.contactFormButton:active {
+    background-color: var(--bg-gray);
+    color: var(--button-text-active-color);
+}
+
+.required {
+    color: rgba(255,0,0,0.8);
+}

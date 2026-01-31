@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Fallback theme */
+:root {
+    --bg-black: #000000;
+    --bg-dark-gray: #0a0a0e;
+    --bg-gray: #161618;
+    --bg-light-gray: #222225;
+    --border-color: #333333;
+    --text-color: #dddddd;
+    --bold-text-color: #ffffff;
+    --text-highlight-color: #FFA500;
+    --text-active-color: #A66A00;
+    --shadow-normal: rgba(0, 0, 0, 0.3);
+    --white-icon-inversion: invert(0);
+}
+
+/* Dark theme */
+:root[data-theme="dark"] {
+    --bg-black: #000000;
+    --bg-dark-gray: #0a0a0e;
+    --bg-gray: #161618;
+    --bg-light-gray: #222225;
+    --border-color: #333333;
+    --text-color: #dddddd;
+    --bold-text-color: #ffffff;
+    --text-highlight-color: #FFA500;
+    --text-active-color: #A66A00;
+    --shadow-normal: rgba(0, 0, 0, 0.3);
+    --white-icon-inversion: invert(0);
+}
+
+/* Light theme */
+:root[data-theme="light"] {
+    --bg-black: #ffffff;
+    --bg-dark-gray: #e0e0e0;
+    --bg-gray: #f0f0f0;
+    --bg-light-gray: #fafafa;
+    --border-color: #cccccc;
+    --text-color: #333333;
+    --bold-text-color: #000000;
+    --text-highlight-color: #FF8C00;
+    --text-active-color: #CC7000;
+    --shadow-normal: rgba(0, 0, 0, 0.1);
+    --white-icon-inversion: invert(1);
+}
+
+@layer base {
+
+    *, *::before, *::after {
+        box-sizing: border-box;
+    }
+    
+    html, body {
+        margin: 0;
+        padding: 0;
+        overscroll-behavior: none;
+    }
+
+    #root {
+        min-height: 100dvh
+    }
+    html {
+        scroll-behavior: smooth;
+    }
+    body {
+        margin: 0;
+        background-color: var(--bg-dark-gray);
+        color: var(--text-color);
+        overflow-y: auto;
+        overflow-x: hidden;
+        font-family: 'Inter', system-ui, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border-color 0.3s ease-in-out; /* Smooth transition for theme changes */
+    }
+    main{
+        flex: 1;
+        width: 100%;
+        overflow-y: visible;
+        overflow-x: hidden; 
+
+    }
+    .app{
+        min-height: 100dvh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    main::-webkit-scrollbar {
+        width: 8px;
+    }
+    main::-webkit-scrollbar-thumb {
+        background-color: var(--border-color);
+        border-radius: 4px;
+   
+    }
+    main::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+    main::-webkit-scrollbar-thumb:hover {
+        background-color: #555555;
+    }
+}

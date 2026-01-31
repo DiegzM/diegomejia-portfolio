@@ -1,0 +1,35 @@
+.socialLinkContainer {
+    width: 100%;
+    display : flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.socialLink {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.socialLink img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: var(--white-icon-inversion) drop-shadow(0 0 1px rgba(255, 255, 255, 1));
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+.socialLink img:hover {
+    transform: scale(1.1);
+    filter: brightness(0) saturate(100%) invert(62%) sepia(83%) saturate(749%)
+        hue-rotate(-2deg) brightness(102%) contrast(101%)
+        drop-shadow(0 0 4px var(--text-highlight-color));
+
+}
+.socialLink img:active {
+    filter: none;
+}

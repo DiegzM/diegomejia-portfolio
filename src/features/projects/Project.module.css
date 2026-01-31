@@ -1,0 +1,108 @@
+.backButton {
+    position: absolute;
+    top: 1.6rem;
+    left: 2rem;
+    width: 40px;
+}
+
+.backButton img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    cursor: pointer;
+    filter: var(--white-icon-inversion) drop-shadow(0 0 1px rgba(255, 255, 255, 1));
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+.backButton img:hover {
+    filter: var(--white-icon-inversion) drop-shadow(0 0 4px rgba(255, 255, 255, 0.8));
+    transform: scale(1.2);
+}
+
+.backButton img:active {
+    filter: var(--white-icon-inversion) drop-shadow(0 0 6px rgba(255, 255, 255, 0));
+}
+
+.thumbnailContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+.thumbnailContainer img {
+    width: 80%;
+    max-width: 800px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+}
+
+.linkContainer {   
+    width: 100%;
+    display: flex;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.linkButtonContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    width: 100%;
+    max-width: 600px;
+}
+
+.linkButton {
+    background-color: var(--bg-dark-gray);
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin: 1rem 0;
+    border-radius: 8px;
+
+}
+.linkButton img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    filter: var(--white-icon-inversion) drop-shadow(0 0 1px rgba(255, 255, 255, 1));
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.projectText {
+    width: 100%;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    text-align: center;
+    white-space: pre-line; /* Preserve line breaks */
+}
+
+.projectBullets {
+    width: 100%;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    text-align: left;
+    margin-left: 2rem;
+}
+
+.projectVideoContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+.projectVideoContainer video {
+    width: 100%;
+    max-width: 800px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+}

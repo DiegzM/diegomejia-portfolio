@@ -1,0 +1,14 @@
+.footer {
+    position: relative;
+    padding: 1rem;
+    background-color: var(--bg-black) !important;
+    margin: 0;
+    color: var(--bold-text-color) !important;
+    z-index: 1000;
+    
+    text-align: center;
+    text-wrap: auto;
+    font-size: 0.9rem;
+    
+    box-shadow: 10px -5px 20px var(--shadow-normal);
+}
