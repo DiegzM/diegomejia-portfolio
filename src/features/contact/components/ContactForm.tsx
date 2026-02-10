@@ -38,8 +38,17 @@ export default function ContactForm({ onSystemMessage }: ContactFormProps) {
         if (response.ok) {
             onSystemMessage("Message sent successfully!", "success");
             setFormData({ name: "", email: "", message: "" });
-        } else {
-            onSystemMessage("Failed to send message.", "error");
+        }
+        else {
+            // Handle validation errors from Formspree
+            const errorData = await response.json();
+            if (errorData.errors) {
+                const errorMessages = errorData.errors.map((err: any) => err.message).join(", ");
+                onSystemMessage(`Failed to send message: ${errorMessages}`, "error");
+            } 
+            else {
+                onSystemMessage("Failed to send message.", "error");
+            }
         }
     }
 

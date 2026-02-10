@@ -21,10 +21,10 @@ export default function AboutPage() {
                             <Card backgroundColor="var(--bg-light-gray)">
                                 <div className={cardStyles.text}>
                                     <p>
-                                        <b>Hi there!</b> I'm Diego Mejia, a Computer Science student at Cal Poly Pomona with a passion for building applications and creating smooth user experiences.
-                                        I enjoy learning new technologies and applying them to solve real-world problems through code. 
-                                        My interests include web development, AI/ML, and mobile app development. 
-                                        In my free time, I love playing the guitar, exploring new music, and hiking.
+                                        <b>Hi there!</b> I'm a Computer Science student studying at Cal Poly Pomona, and I enjoy building applications,
+                                        learning new technologies, and creating smooth user experiences. Most importantly, I aim to
+                                        create real-world solutions through code.
+                                        I develop applications both for desktop and web platforms, and I also have experience with AI/ML training and music software development.
                                     </p>
                                 </div>
                             </Card>
