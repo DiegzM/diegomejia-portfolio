@@ -111,6 +111,12 @@ export default function ProjectDetail() {
                                             </video>
                                         </div>
                                     );
+                                case 'image':
+                                    return (
+                                        <div key={blockIndex} className={styles.projectImageContainer}>
+                                            <img src={block.src} alt={block.alt || 'Project Image'} />
+                                        </div>
+                                    ); 
                                 default:
                                     return null;
                             }

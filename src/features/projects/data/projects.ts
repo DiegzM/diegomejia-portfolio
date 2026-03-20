@@ -7,6 +7,7 @@ export type SectionBlock =
     | { type: 'text'; content: string }
     | { type: 'bullets'; header?: string; content: string[] }
     | { type: 'video'; src: string }
+    | { type: 'image'; src: string; alt?: string }
     | { type: 'divider' }
 
 export interface Section {
@@ -162,4 +163,53 @@ export const projects: Project[] = [
             }
         ]
     },
+    {
+        id: 'newmanbot',
+        title: 'NewmanBot',
+        shortDescription: 'A Catholic AI Assistant powered by Magisterium AI. Ask questions about the faith, get Bible verses, and get daily Mass readings!',
+        thumbnail: '/projects/assets/newmanbot/thumbnail.png',
+        featured: true,
+        githubUrl: 'https://github.com/DiegzM/newmanbot',
+        liveUrl: 'https://discord.com/oauth2/authorize?client_id=1382112683431825509&permissions=274877991936&integration_type=0&scope=bot+applications.commands',
+        sections: [
+            {
+                blocks: [
+                    { type: 'subheader', content: 'Overview' },
+                    { type: 'divider' },
+                    { type: 'text', content: `A Discord bot for a Catholic communities that implements the Magisterium AI API (GPT) to answer questions and list citations from Catholic teaching. It can answer questions about Faith, Doctrine, Saints, Scripture, and much more. It can also fetch Bible verses from the New American Bible Revised Edition (NABRE), and fetch daily readings!
+                        
+                        This bot is named after St. John Henry Newman, the patron saint of Catholic education and universities. It was originally created for the Cal Poly Pomona Newman Club, with the goal to make the Magisterium AI accessible to Discord. We are expanding usage so that the whole Discord community may be able use this!`},
+                ]
+            },
+            {
+                blocks: [
+                    { type: 'subheader', content: 'Features' },
+                    { type: 'divider' },
+                    { type: 'bullets', content: [
+                        "Respond to user prompts related to the Catholic Faith using /ask",
+                        "Provide linked citations for users to explore further",
+                        "Fetch Bible verses using /bible and a random verse using /randomverse",
+                        "Fetch daily readings using /dailyreading"
+                    ] }
+                ]
+            },
+            {
+                blocks: [
+                    { type: 'subheader', content: 'Tech Stack' },
+                    { type: 'divider' },
+                    { type: 'bullets', content: [
+                        "Languages and Frameworks: JavaScript (Node.js), Discord.js",
+                        "Tools and APIs: Magisterium AI API, query.bibleget.io/v3, cpbjr.github.io/catholic-readings-api"
+                    ] }
+                ]
+            },
+            {
+                blocks: [
+                    { type: 'subheader', content: 'Demo' },
+                    { type: 'divider' },
+                    { type: 'image', src: '/projects/assets/newmanbot/demo.gif' }
+                ]
+            }
+        ]
+    }
 ];
